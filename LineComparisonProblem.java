@@ -37,17 +37,20 @@ public class LineComparisonProblem {
 
             Line l1 = new Line(p1, p2);
             Line l2 = new Line(p3, p4);
+        
+         compareTo(l1, l2);
 
-            equals(l1, l2);
     }
-     public static void equals(Line l1, Line l2){
-
-        if (l1.lineLength() == l2.lineLength()){
-            System.out.println("Both the lines are equal in length");
+    
+    public static void compareTo(Line l1, Line l2){
+        if (l1.lineLength() > l2.lineLength()){
+            System.out.println("The First Line is longer than the Second Line ");
         }
-
+        else if (l2.lineLength() > l1.lineLength()){
+            System.out.println("The Second Line is longer than the First line ");
+        }
         else{
-            System.out.println("The lines are not equal in length");
+            System.out.println("Both the lines are equal in length");
         }
     }
 }
